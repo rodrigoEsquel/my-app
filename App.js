@@ -1,14 +1,7 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  FlatList,
-  StyleSheet,
-  Image,
-  Pressable,
-  Alert,
-} from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import TopBanner from './src/components/TopBanner/TopBanner';
+import BottomMenu from './src/components/BottomMenu/BottomMenu';
 import Item from './src/components/Item/Item';
 
 const App = () => {
@@ -28,6 +21,7 @@ const App = () => {
           keyExtractor={(item) => item.id}
         />
       </View>
+      <BottomMenu />
     </View>
   );
 };
