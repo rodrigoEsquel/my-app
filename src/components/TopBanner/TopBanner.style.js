@@ -16,9 +16,6 @@ const TopBannerStyle = StyleSheet.create({
     fontSize: 20,
     margin: 5,
   },
-  title: {
-    marginBottom: 10,
-  },
   total: {
     backgroundColor: '#F0F0F0',
     margin: 10,
