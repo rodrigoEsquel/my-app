@@ -1,9 +1,11 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
+import TopBanner from './src/components/TopBanner/TopBanner';
 
 const App = () => {
   return (
     <View style={styles.container}>
+      <TopBanner totalBalance={1000} />
       <Text style={styles.title}>Hello World</Text>
       <Image
         source={{ uri: 'https://picsum.photos/200/200' }}
@@ -41,4 +43,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
