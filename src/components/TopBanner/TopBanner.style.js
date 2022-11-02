@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 const TopBannerStyle = StyleSheet.create({
   container: {
-    position: 'absolute',
     top: 0,
     height: 90,
     width: '100%',
@@ -33,4 +32,3 @@ const TopBannerStyle = StyleSheet.create({
 });
 
 export default TopBannerStyle;
-

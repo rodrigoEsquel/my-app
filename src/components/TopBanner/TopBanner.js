@@ -20,4 +20,3 @@ const TopBanner = ({ totalBalance, addHandler }) => {
 };
 
 export default TopBanner;
-

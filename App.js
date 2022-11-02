@@ -1,25 +1,33 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
+import {
+  Text,
+  View,
+  FlatList,
+  StyleSheet,
+  Image,
+  Pressable,
+  Alert,
+} from 'react-native';
 import TopBanner from './src/components/TopBanner/TopBanner';
+import Item from './src/components/Item/Item';
 
 const App = () => {
+  const itemList = [
+    { id: 1, value: 100, type: 'income', description: 'salary' },
+    { id: 2, value: 200, type: 'critical', description: 'car fix' },
+    { id: 3, value: 150, type: 'pleasure', description: 'movie night' },
+    { id: 4, value: 100, type: 'income', description: 'salary' },
+  ];
   return (
     <View style={styles.container}>
       <TopBanner totalBalance={1000} />
-      <Text style={styles.title}>Hello World</Text>
-      <Image
-        source={{ uri: 'https://picsum.photos/200/200' }}
-        style={styles.image}
-      />
-      <Pressable>
-        <Text
-          style={styles.button}
-          onPress={() => {
-            Alert.alert('hola');
-          }}>
-          Press ME
-        </Text>
-      </Pressable>
+      <View style={{ flex: 1, padding: 10 }}>
+        <FlatList
+          data={itemList}
+          renderItem={({ item }) => <Item item={item} />}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   );
 };
